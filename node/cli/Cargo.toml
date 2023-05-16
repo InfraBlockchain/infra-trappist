@@ -13,7 +13,7 @@ build = "build.rs"
 targets = ["x86_64-unknown-linux-gnu"]
 
 [build-dependencies]
-substrate-build-script-utils = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
+substrate-build-script-utils = { git = "https://github.com/InfraBlockchain/infra-substrate", default-features = false, branch = "master" }
 
 [dependencies]
 async-trait = "0.1.57"
@@ -31,38 +31,38 @@ trappist-runtime = { path = "../../runtime/trappist" }
 stout-runtime = { path = "../../runtime/stout" }
 
 # Substrate Dependencies
-frame-benchmarking-cli = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37", optional = true }
-try-runtime-cli = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37", optional = true }
+frame-benchmarking-cli = { git = "https://github.com/InfraBlockchain/infra-substrate", default-features = false, branch = "master", optional = true }
+try-runtime-cli = { git = "https://github.com/InfraBlockchain/infra-substrate", default-features = false, branch = "master", optional = true }
+
+sc-sysinfo = { git = "https://github.com/InfraBlockchain/infra-substrate", default-features = false, branch = "master" }
+sc-telemetry = { git = "https://github.com/InfraBlockchain/infra-substrate", default-features = false, branch = "master" }
+sc-tracing = { git = "https://github.com/InfraBlockchain/infra-substrate", default-features = false, branch = "master" }
+
+sp-runtime = { git = "https://github.com/InfraBlockchain/infra-substrate", default-features = false, branch = "master" }
 
 ## Substrate Client Dependencies
-sc-cli = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37", optional = true}
-sc-service = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37", optional = true }
-sc-sysinfo = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
-sc-telemetry = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
-sc-tracing = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
-
+sc-cli = { git = "https://github.com/InfraBlockchain/infra-substrate", default-features = false, branch = "master", optional = true }
+sc-service = { git = "https://github.com/InfraBlockchain/infra-substrate", default-features = false, branch = "master", optional = true }
 ## Substrate Primitive Dependencies
-sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" , optional = true}
-sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37" }
-
+sp-core = { git = "https://github.com/InfraBlockchain/infra-substrate", default-features = false, branch = "master", optional = true }
 # Cumulus dependencies
-cumulus-client-cli = { git = "https://github.com/paritytech/cumulus", branch = "polkadot-v0.9.37" }
-cumulus-client-consensus-aura = { git = "https://github.com/paritytech/cumulus", branch = "polkadot-v0.9.37" }
-cumulus-client-consensus-relay-chain = { git = "https://github.com/paritytech/cumulus", branch = "polkadot-v0.9.37" }
-cumulus-client-consensus-common = { git = "https://github.com/paritytech/cumulus", branch = "polkadot-v0.9.37" }
-cumulus-client-network = { git = "https://github.com/paritytech/cumulus", branch = "polkadot-v0.9.37" }
-cumulus-client-service = { git = "https://github.com/paritytech/cumulus", branch = "polkadot-v0.9.37" }
-cumulus-primitives-core = { git = "https://github.com/paritytech/cumulus", branch = "polkadot-v0.9.37" }
-cumulus-primitives-parachain-inherent = { git = "https://github.com/paritytech/cumulus", branch = "polkadot-v0.9.37" }
-cumulus-relay-chain-interface = { git = "https://github.com/paritytech/cumulus", branch = "polkadot-v0.9.37" }
+cumulus-client-cli = { git = "https://github.com/InfraBlockchain/infra-cumulus", branch = "master" }
+cumulus-client-consensus-aura = { git = "https://github.com/InfraBlockchain/infra-cumulus", branch = "master" }
+cumulus-client-consensus-relay-chain = { git = "https://github.com/InfraBlockchain/infra-cumulus", branch = "master" }
+cumulus-client-consensus-common = { git = "https://github.com/InfraBlockchain/infra-cumulus", branch = "master" }
+cumulus-client-network = { git = "https://github.com/InfraBlockchain/infra-cumulus", branch = "master" }
+cumulus-client-service = { git = "https://github.com/InfraBlockchain/infra-cumulus", branch = "master" }
+cumulus-primitives-core = { git = "https://github.com/InfraBlockchain/infra-cumulus", branch = "master" }
+cumulus-primitives-parachain-inherent = { git = "https://github.com/InfraBlockchain/infra-cumulus", branch = "master" }
+cumulus-relay-chain-interface = { git = "https://github.com/InfraBlockchain/infra-cumulus", branch = "master" }
 
-parachains-common = { git = "https://github.com/paritytech/cumulus", branch = "polkadot-v0.9.37", default-features = false }
+parachains-common = { git = "https://github.com/InfraBlockchain/infra-cumulus", default-features = false, branch = "master" }
 
 # Polkadot dependencies
-polkadot-cli = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37" }
-polkadot-parachain = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37" }
-polkadot-primitives = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37" }
-polkadot-service = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37" }
+infrablockspace-cli = { git = "https://github.com/InfraBlockchain/infra-relay-chain", branch = "master" }
+infrablockspace-parachain = { git = "https://github.com/InfraBlockchain/infra-relay-chain", branch = "master" }
+infrablockspace-primitives = { git = "https://github.com/InfraBlockchain/infra-relay-chain", branch = "master" }
+infrablockspace-service = { git = "https://github.com/InfraBlockchain/infra-relay-chain", branch = "master" }
 
 service = { package = "trappist-service", path = "../service", default-features = false, optional = true }
 
@@ -72,26 +72,13 @@ nix = "0.23"
 tempfile = "3.2.0"
 
 [features]
-default = [ "cli" ]
-cli = [
-	"service",
-	"sp-core",
-	"sc-cli",
-	"sc-service",
-	"frame-benchmarking-cli",
-	"try-runtime-cli",
-]
+default = ["cli"]
+cli = ["service", "sp-core", "sc-cli", "sc-service", "frame-benchmarking-cli", "try-runtime-cli"]
 runtime-benchmarks = [
-	"polkadot-cli/runtime-benchmarks",
-    "trappist-runtime/runtime-benchmarks",
-	"stout-runtime/runtime-benchmarks"
+	"infrablockspace-cli/runtime-benchmarks",
+	"trappist-runtime/runtime-benchmarks",
+	"stout-runtime/runtime-benchmarks",
 ]
-try-runtime = [
-	"service/try-runtime"
-]
-with-trappist-runtime = [
-	"service/with-trappist-runtime",
-]
-with-stout-runtime = [
-	"service/with-stout-runtime",
-]
+try-runtime = ["service/try-runtime"]
+with-trappist-runtime = ["service/with-trappist-runtime"]
+with-stout-runtime = ["service/with-stout-runtime"]
