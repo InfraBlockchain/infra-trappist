@@ -1,14 +1,11 @@
 [workspace]
 members = [
-    "node",
-    "runtime/stout",
-    "runtime/trappist",
+    # "node",
+    # "runtime/stout",
+    # "runtime/trappist",
     "primitives/xcm",
 ]
-exclude = [
-    "contracts",
-    "xcm-simulator"
-]
+exclude = ["contracts", "xcm-simulator"]
 
 [profile.release]
 panic = "unwind"
