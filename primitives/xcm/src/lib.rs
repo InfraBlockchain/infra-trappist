@@ -3,7 +3,7 @@
 use frame_support::{
 	sp_runtime::SaturatedConversion,
 	traits::{fungibles::Inspect, Currency},
-	weights::Weight,
+	weights::{OldWeight, Weight},
 };
 use sp_std::{borrow::Borrow, marker::PhantomData, vec::Vec};
 use xcm::{
@@ -117,7 +117,7 @@ impl<AssetId, AssetIdInfoGetter, AssetsPallet, BalancesPallet, XcmPallet, Accoun
 		}
 
 		// TODO: put real weight of execution up until this point here
-		let mut weight = Weight::from(0);
+		let mut weight = Weight::from(OldWeight(0));
 
 		if !trap.is_empty() {
 			// we have filtered out non-compliant assets
