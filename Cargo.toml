@@ -3,6 +3,7 @@ members = [
     # "node",
     # "runtime/stout",
     # "runtime/trappist",
+    "pallets/asset-registry",
     "primitives/xcm",
 ]
 exclude = ["contracts", "xcm-simulator"]

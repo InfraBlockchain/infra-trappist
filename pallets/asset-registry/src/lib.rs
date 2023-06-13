@@ -25,6 +25,7 @@ pub mod pallet {
 		Junction::{GeneralIndex, PalletInstance, Parachain},
 		Junctions, MultiLocation,
 	};
+	use xcm_primitives::AssetMultiLocationGetter;
 
 	#[pallet::pallet]
 	#[pallet::generate_store(pub(super) trait Store)]
@@ -132,7 +133,7 @@ pub mod pallet {
 		}
 	}
 
-	impl<T: Config> xcm_primitives::AssetMultiLocationGetter<AssetIdOf<T>> for Pallet<T> {
+	impl<T: Config> AssetMultiLocationGetter<AssetIdOf<T>> for Pallet<T> {
 		fn get_asset_multi_location(asset_id: AssetIdOf<T>) -> Option<MultiLocation> {
 			AssetIdMultiLocation::<T>::get(asset_id)
 		}
