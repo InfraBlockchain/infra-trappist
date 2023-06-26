@@ -41,11 +41,11 @@ infrablockspace-core-primitives = { git = "https://github.com/InfraBlockchain/in
 infrablockspace-runtime-parachains = { git = "https://github.com/InfraBlockchain/infra-relay-chain", default-features = false, branch = "master" }
 infrablockspace-parachain = { git = "https://github.com/InfraBlockchain/infra-relay-chain", default-features = false, branch = "master" }
 
-parachain-info = { git = "https://github.com/InfraBlockchain/infra-cumulus", default-features = false, branch = "master" }
-parachains-common = { git = "https://github.com/InfraBlockchain/infra-cumulus", default-features = false, branch = "master" }
-cumulus-pallet-dmp-queue = { git = "https://github.com/InfraBlockchain/infra-cumulus", default-features = false, branch = "master" }
-cumulus-pallet-xcmp-queue = { git = "https://github.com/InfraBlockchain/infra-cumulus", default-features = false, branch = "master" }
-cumulus-primitives-core = { git = "https://github.com/InfraBlockchain/infra-cumulus", default-features = false, branch = "master" }
+# parachain-info = { git = "https://github.com/InfraBlockchain/infra-cumulus", default-features = false, branch = "master" }
+# parachains-common = { git = "https://github.com/InfraBlockchain/infra-cumulus", default-features = false, branch = "master" }
+# cumulus-pallet-dmp-queue = { git = "https://github.com/InfraBlockchain/infra-cumulus", default-features = false, branch = "master" }
+# cumulus-pallet-xcmp-queue = { git = "https://github.com/InfraBlockchain/infra-cumulus", default-features = false, branch = "master" }
+# cumulus-primitives-core = { git = "https://github.com/InfraBlockchain/infra-cumulus", default-features = false, branch = "master" }
 
 [features]
 default = ["std"]
@@ -67,11 +67,11 @@ std = [
 	"infrablockspace-core-primitives/std",
 	"infrablockspace-runtime-parachains/std",
 	"infrablockspace-parachain/std",
-	"parachain-info/std",
-	"parachains-common/std",
-	"cumulus-pallet-dmp-queue/std",
-	"cumulus-pallet-xcmp-queue/std",
-	"cumulus-primitives-core/std",
+	# "parachain-info/std",
+	# "parachains-common/std",
+	# "cumulus-pallet-dmp-queue/std",
+	# "cumulus-pallet-xcmp-queue/std",
+	# "cumulus-primitives-core/std",
 ]
 runtime-benchmarks = ["frame-benchmarking/runtime-benchmarks"]
 try-runtime = ["frame-support/try-runtime"]
